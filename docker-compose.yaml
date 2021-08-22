@@ -1,28 +1,19 @@
-version: '3'
-services:
-  strapi:
-    image: strapi/strapi
-    environment:
-      DATABASE_CLIENT: postgres
-      DATABASE_NAME: strapi
-      DATABASE_HOST: postgres
-      DATABASE_PORT: 5432
-      DATABASE_USERNAME: strapi
-      DATABASE_PASSWORD: strapi
-    volumes:
-      - ./app:/srv/app
-    ports:
-      - '1337:1337'
-    depends_on:
-      - postgres
+version: "3"
 
-  postgres:
+services:
+  database_wongames:
     image: postgres
-    environment:
-      POSTGRES_DB: strapi
-      POSTGRES_USER: strapi
-      POSTGRES_PASSWORD: strapi
-    volumes:
-      - ./data:/var/lib/postgresql/data
+    container_name: database_wongames
+    restart: always
     ports:
-      - '5432:5432'
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=wongames
+      - POSTGRES_PASSWORD=wongames
+      - POSTGRES_DB=wongames
+    volumes:
+      - pgdata:/data/postgres
+
+volumes:
+  pgdata:
+    driver: local
