@@ -5,11 +5,11 @@ import Logo from "../../../assets/images/logo-won.svg";
 
 const Wrapper = styled.div`
   background-color: #333;
-  height: ${(props) => props.theme.main.sizes.leftMenu.height};
-  
+  height: ${({ theme }) => theme.main.sizes.leftMenu.height};
+
   .projectName {
     display: block;
-    height: ${(props) => props.theme.main.sizes.leftMenu.height};
+    height: ${({ theme }) => theme.main.sizes.leftMenu.height};
     background-image: url(${Logo});
     background-repeat: no-repeat;
     background-position: center center;
