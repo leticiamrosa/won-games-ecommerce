@@ -82,8 +82,8 @@
       "dominant": true
     },
     "publisher": {
-      "model": "publisher",
-      "via": "games"
+      "via": "games",
+      "model": "publisher"
     }
   }
 }
