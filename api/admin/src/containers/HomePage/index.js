@@ -17,6 +17,20 @@ import {
   Separator,
 } from "./components";
 
+const FIRST_BLOCK_LINKS = [
+  {
+    link:
+      "https://strapi.io/documentation/v3.x/getting-started/quick-start.html#_4-create-a-category-content-type",
+    contentId: "app.components.BlockLink.documentation.content",
+    titleId: "app.components.BlockLink.documentation",
+  },
+  {
+    link: "https://github.com/strapi/foodadvisor",
+    contentId: "app.components.BlockLink.code.content",
+    titleId: "app.components.BlockLink.code",
+  },
+];
+
 const HomePage = () => {
   return (
     <>
