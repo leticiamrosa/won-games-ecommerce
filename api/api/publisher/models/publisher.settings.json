@@ -2,15 +2,12 @@
   "kind": "collectionType",
   "collectionName": "publishers",
   "info": {
-    "name": "Publishers",
-    "description": ""
+    "name": "publisher"
   },
   "options": {
     "increments": true,
-    "timestamps": true,
-    "draftAndPublish": true
+    "timestamps": true
   },
-  "pluginOptions": {},
   "attributes": {
     "name": {
       "type": "string",
@@ -24,7 +21,7 @@
     },
     "games": {
       "via": "publisher",
-      "collection": "games"
+      "collection": "game"
     }
   }
 }
